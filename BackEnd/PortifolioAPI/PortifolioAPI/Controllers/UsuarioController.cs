@@ -29,9 +29,22 @@ namespace PortifolioAPI.Controllers
         [HttpGet("UsuarioById/{id}")]
         public async Task<IActionResult> UsuarioById(int id)
         {
-            var result = await this.usuarioRepository.GetUsuarioAsyncById(id);
-
-            return Ok(result);
+            try
+            {
+                var result = await this.usuarioRepository.GetUsuarioAsyncById(id);
+                if (result != null)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound($"Erro: Usuario não encontrado.") ;
+                }
+            }
+            catch(Exception ex)
+            {
+                return BadRequest($"Erro:{ex.Message}");
+            }
         }
     }
 }
