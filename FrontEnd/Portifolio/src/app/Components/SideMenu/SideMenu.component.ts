@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-Home',
-  templateUrl: './Home.component.html',
-  styleUrls: ['./Home.component.css']
+  selector: 'app-SideMenu',
+  templateUrl: './SideMenu.component.html',
+  styleUrls: ['./SideMenu.component.css']
 })
-export class HomeComponent implements OnInit {
+export class SideMenuComponent implements OnInit {
 
   constructor() { }
 
@@ -18,4 +18,5 @@ export class HomeComponent implements OnInit {
       habilidades: 'C#, Angular 8, SQL Server'
     }
   ];
+
 }
