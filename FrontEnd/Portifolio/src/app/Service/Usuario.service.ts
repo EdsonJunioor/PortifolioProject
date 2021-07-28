@@ -1,0 +1,24 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Usuario } from '../Models/Usuario';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UsuarioService {
+
+  baseUrl = environment.baseUrl + 'usuario';
+
+  constructor(private http: HttpClient) { }
+
+  getAll(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.baseUrl);
+  }
+
+  getById(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(this.baseUrl + `/${id}`);
+  }
+
+}
