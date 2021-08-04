@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/Models/Usuario';
 
 @Component({
   selector: 'app-SideMenu',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./SideMenu.component.css']
 })
 export class SideMenuComponent implements OnInit {
+
+  public usuario: Usuario[] = [];
 
   constructor() { }
 

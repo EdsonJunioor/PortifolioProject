@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PortifolioAPI.Models;
 
 namespace PortifolioAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/usuario")]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepository usuarioRepository;
@@ -26,7 +27,7 @@ namespace PortifolioAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet("UsuarioById/{id}")]
+        [HttpGet, Route("{id}")]
         public async Task<IActionResult> UsuarioById(int id)
         {
             try
@@ -45,6 +46,25 @@ namespace PortifolioAPI.Controllers
             {
                 return BadRequest($"Erro:{ex.Message}");
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Criar([FromBody]Usuario usuarioModel)
+        {
+            try
+            {
+                this.usuarioRepository.Add(usuarioModel);
+
+                if (await this.usuarioRepository.SaveChangesAsync())
+                {
+                    return Ok(usuarioModel);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro:{ex.Message}");
+            }
+            return BadRequest();
         }
     }
 }
