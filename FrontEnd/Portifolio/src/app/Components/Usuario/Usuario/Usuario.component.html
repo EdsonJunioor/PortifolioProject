@@ -1,15 +1,21 @@
 <div class="container">
   <div class="row">
       <div class="offset-4 col-6">
-          <div class="mt-20">
-              <h1 class="text-center">{{usuario.nome}}</h1>
-          </div>
-          <div>
-              <p>{{usuario.email}}</p>
-          </div>
-          <div>
-              <p>{{usuario.habilidades}}</p>
-          </div>
+            <div class="mt-20">
+                <h1 class="text-center">{{usuario.nome}}</h1>
+            </div>
+            <div>
+                <p *ngFor="let textoApresentacao of textoApresentacao">{{textoApresentacao.apresentacao}}</p>
+            </div>
+            <div>
+                <h3 class="text-center">Ferramentas Usadas</h3>
+            </div>
+            <div>
+                <p *ngFor="let textoApresentacao of textoApresentacao">{{textoApresentacao.ferramentas}}</p>
+            </div>
+            <div>
+                <p>{{usuario.habilidades}}</p>
+            </div>
       </div>
   </div>
 </div>
