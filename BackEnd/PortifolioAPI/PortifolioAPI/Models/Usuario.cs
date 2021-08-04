@@ -7,16 +7,6 @@ namespace PortifolioAPI.Models
 {
     public class Usuario
     {
-        public Usuario(int Id, string Nome, int Idade, string Email, string Descricao, string Habilidades)
-        {
-            this.Id = Id;
-            this.Nome = Nome;
-            this.Idade = Idade;
-            this.Email = Email;
-            this.Descricao = Descricao;
-            this.Habilidades = Habilidades;
-        }
-
         public int Id { get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
