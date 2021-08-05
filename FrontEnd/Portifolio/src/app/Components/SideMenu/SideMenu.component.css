@@ -69,15 +69,40 @@
 .sidebar-navigation li:hover::before {
     width: 100%;
 }
+.fotoSideBar{
+    border-radius: 10%;
+    width: 100px; 
+    height: 100px;
+}
   
 .content-container {
   padding-left: 220px;
 }
 
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
 .mt-100{
     margin-top: 100px;
+}
+.p-20{
+    padding: 20px;
 }
 .txt-center{
     text-align: center;
 }
 
+/* Font-size */
+.fs-15{
+    font-size: 15px;
+}
+.fs-18{
+    font-size: 18px;
+}
+
+.fs-24{
+    font-size: 24px !important;
+}
