@@ -1,0 +1,74 @@
+.template-footer{
+    font-family: sans-serif;
+    background-color: rgb(24, 25, 54);
+    height: 190px;
+}
+.footer-itens{
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 36px;
+    background-color: rgb(24, 25, 54);
+}
+
+/* Font-size */
+.fs-10{
+    font-size: 10px;
+}
+.fs-12{
+    font-size: 12px;
+}
+.fs-15{
+    font-size: 15px;
+}
+.fs-18{
+    font-size: 18px;
+}
+
+.fs-24{
+    font-size: 24px;
+}
+
+/* Padding */
+.p-16{
+    padding: 16px;
+}
+.p-20{
+    padding: 20px;
+}
+
+/* Margin */
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.ml-12{
+    margin-left: 12px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-56{
+    margin-top: 56px;
+}
+
+/* display */
+.d-flex{
+    display: flex;
+}
+.t-center{
+    text-align: center;
+}
