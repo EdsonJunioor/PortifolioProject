@@ -1,27 +1,25 @@
 <div class="container">
   <div class="row">
-    <div>
-      <div class="sidebar-container">
-        <div class="sidebar-logo txt-center">
-          <p *ngFor="let usuario of usuarios">{{usuario.nome}}</p>
-        </div>
-        <div class="txt-center p-20">
-          <img src="assets/Image/EdsonJunior.jpg" class="fotoSideBar"/>
-        </div>
-        <div class="txt-center">
-          <ul class="sidebar-navigation">
-            <li>
-              <a routerLink="home">
-                <i class="fa fa-home" aria-hidden="true"></i> Home
-              </a>
-            </li>
-            <li>
-              <a routerLink="usuario">
-                <i class="fa fa-home" aria-hidden="true"></i> Sobre
-              </a>
-            </li>
-          </ul>
-        </div>
+    <div class="sidebar-container">
+      <div class="sidebar-logo txt-center">
+        <p *ngFor="let usuario of usuarios">{{usuario.nome}}</p>
+      </div>
+      <div class="txt-center p-20">
+        <img src="assets/Image/EdsonJunior.jpg" class="fotoSideBar"/>
+      </div>
+      <div class="txt-center">
+        <ul class="sidebar-navigation">
+          <li>
+            <a routerLink="home">
+              <i class="fa fa-home" aria-hidden="true"></i> Home
+            </a>
+          </li>
+          <li>
+            <a routerLink="usuario">
+              <i class="fa fa-home" aria-hidden="true"></i> Sobre
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
