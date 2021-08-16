@@ -1,0 +1,39 @@
+/* Font-size */
+.fs-15{
+    font-size: 15px;
+}
+.fs-18{
+    font-size: 18px;
+}
+
+.fs-24{
+    font-size: 24px;
+}
+
+/* Padding */
+.w-300{
+    width: 300px;
+}
+.p-20{
+    padding: 20px;
+}
+
+/* Margin */
+.mt-8{
+    margin-top: 8px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
