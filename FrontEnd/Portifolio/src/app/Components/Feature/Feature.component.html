@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-3 col-6 col-md-6 mt-20">
+      <div class="text-center">
+        <h1>New Features</h1>
+      </div>
+      <div>
+       <span>Aqui estarei postando constantemente as atualizações e novas FEATURES desenvolvidas no projeto, construindo o meu portfólio.</span>
+        <p>Além de postagens de novas features, estarei compartilhando em meu repositório do GitHub componentes como: Header, Footer, Menu responsivos etc...</p> 
+      </div>
+      <div class="text-center mt-30">
+        <h2>Componentes</h2>
+      </div>
+      <div class="mt-10" *ngFor="let feature of features">
+        <h3>Home</h3>
+        {{feature.descricao}}
+        <div class="text-center">
+          <img src="assets/Image/feature/{{feature.icone}}.png" alt="" class="w-300 border rounded">
+        </div>
+      </div>
+    </div>
+</div>
