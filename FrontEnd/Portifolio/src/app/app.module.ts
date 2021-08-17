@@ -8,6 +8,8 @@ import { SideMenuComponent } from './Components/SideMenu/SideMenu.component';
 import { UsuarioComponent } from './Components/Usuario/Usuario/Usuario.component';
 import { FooterComponent } from './Components/Footer/Footer.component';
 import { FeatureComponent } from './Components/Feature/Feature.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { FeatureComponent } from './Components/Feature/Feature.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
