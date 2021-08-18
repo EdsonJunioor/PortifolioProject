@@ -16,6 +16,9 @@
 .fs-10{
     font-size: 10px;
 }
+.fs-11{
+    font-size: 11px;
+}
 .fs-12{
     font-size: 12px;
 }
@@ -36,6 +39,9 @@
 }
 .p-20{
     padding: 20px;
+}
+.p-30{
+    padding: 30px;
 }
 
 /* Margin */
@@ -71,4 +77,62 @@
 }
 .t-center{
     text-align: center;
+}
+
+.w-20{
+    width: 20px;
+}
+
+.h-20{
+    height: 20px;
+}
+
+
+
+/* --------------------------------------------- */
+.color-txt{
+    color: #957bda;
+}
+body {
+    background-color: #f3f6fd;
+    font-size: 11.5px;
+    font-weight: bold;
+    color: rgb(189, 196, 203)
+}
+
+.card-colors {
+    color: #646771;
+    background-color: #16151a
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul>li {
+    padding: 4px
+}
+
+ul>li:hover {
+    color: #957bda;
+    cursor: pointer
+}
+
+hr {
+    border-width: 3px
+}
+
+.policy>div {
+    padding: 4px
+}
+
+.titulo {
+    font-family: 'Titillium Web', sans-serif;
+    color: white
+}
+
+.divider {
+    border-top: 2px solid rgba(189, 196, 203, 0.5);
 }
