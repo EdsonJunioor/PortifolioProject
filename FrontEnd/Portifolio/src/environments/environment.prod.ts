@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://localhost:22439/api/'
+  baseUrl: 'http://www.edsonjunior-portfolio.vbweb.com.br/api/'
 };
