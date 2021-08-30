@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Feature } from 'src/app/Models/Feature';
 import { FeatureService } from 'src/app/Service/Feature.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { FeatureService } from 'src/app/Service/Feature.service';
 export class FeatureComponent implements OnInit {
 
   public features?: any[];
+  public featureSelecionada: any;
 
-  constructor(public featureService: FeatureService) { }
+  constructor(public featureService: FeatureService, ) { }
 
   ngOnInit() {
     this.features = this.featureService.getFeatures();

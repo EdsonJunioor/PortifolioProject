@@ -10,6 +10,14 @@
     color: #fff;
 }
 
+.style-menu{
+    background-color: rgb(24, 25, 54);
+    padding: 15px;
+}
+.color-txt{
+    color: rgb(255, 255, 255) !important; 
+}
+
 .content-container {
     padding-top: 20px;
 }

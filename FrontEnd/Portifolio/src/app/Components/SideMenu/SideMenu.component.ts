@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/Models/Usuario';
+import { FeatureService } from 'src/app/Service/Feature.service';
 
 @Component({
   selector: 'app-SideMenu',
@@ -10,7 +11,7 @@ export class SideMenuComponent implements OnInit {
 
   public usuario: Usuario[] = [];
 
-  constructor() { }
+  constructor(private featuresService: FeatureService) { }
 
   ngOnInit() {
   }
