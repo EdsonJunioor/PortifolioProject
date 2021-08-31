@@ -5,10 +5,10 @@ import { HomeComponent } from './Components/Home/Home.component';
 import { UsuarioComponent } from './Components/Usuario/Usuario/Usuario.component';
 
 const routes: Routes = [                              //todas as rotas/componentes devem ser sitados aqui
-  { path: '', redirectTo: 'home', pathMatch:'full'},  // redirectTo redireciona para uma rota padrao quando nao esta em nenhuma outra rota do site
   { path: 'home', component: HomeComponent},          //sintaxe para configuração de um outro componente criado no app
   { path: 'usuario', component: UsuarioComponent},
-  { path: 'features', component: FeatureComponent}
+  { path: 'features', component: FeatureComponent},
+  { path: '', redirectTo: 'home', pathMatch:'full'},  // redirectTo redireciona para uma rota padrao quando nao esta em nenhuma outra rota do site
 ];
 
 @NgModule({
