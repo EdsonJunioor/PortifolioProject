@@ -1,8 +1,3 @@
-.template-footer{
-    font-family: sans-serif;
-    background-color: rgb(24, 25, 54);
-    height: 190px;
-}
 .footer-itens{
     margin-top: 32px;
     display: flex;
@@ -10,6 +5,11 @@
     align-items: center;
     padding-bottom: 36px;
     background-color: rgb(24, 25, 54);
+}
+.posicao{
+    position: unset;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Font-size */
