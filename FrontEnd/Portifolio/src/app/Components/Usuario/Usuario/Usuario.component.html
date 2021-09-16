@@ -1,20 +1,29 @@
-<div class="container">
-  <div class="row">
-      <div class="offset-4 col-6">
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+      <div class="col-md-5 mt-30">
+            <div *ngFor="let apresentacao of apresentacao">
+                <h1 class="text-center">{{apresentacao.nome}}</h1>
+                <div >
+                    <p>{{apresentacao.apresentacao}}</p>
+                </div>
+            </div>
             <div class="mt-20">
-                <h1 class="text-center">{{usuario.nome}}</h1>
+                <h2>Experiência Profissional</h2>
+            </div>
+            <div class="mt-20" *ngFor="let experiencia of experiencias">
+                <a href="https://www.linkedin.com/company/itixti/mycompany/"><strong>{{experiencia.empresa}}</strong></a>
+                <div>
+                    {{experiencia.cargo}}
+                    {{experiencia.descricao}}
+                </div>
             </div>
             <div>
-                <p *ngFor="let textoApresentacao of textoApresentacao">{{textoApresentacao.apresentacao}}</p>
+                <h2 class="mt-20">Conhecimento em Tecnologias</h2>
             </div>
-            <div>
-                <h3 class="text-center">Ferramentas Usadas</h3>
-            </div>
-            <div>
-                <p *ngFor="let textoApresentacao of textoApresentacao">{{textoApresentacao.ferramentas}}</p>
-            </div>
-            <div>
-                <p>{{usuario.habilidades}}</p>
+            <div class="row">
+                <div class="col-md-2">
+                    <p *ngFor="let apresentacao of apresentacao">{{apresentacao.tecnologias}}</p>
+                </div>
             </div>
       </div>
   </div>

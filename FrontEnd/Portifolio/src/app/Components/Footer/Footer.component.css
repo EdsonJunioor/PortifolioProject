@@ -11,6 +11,14 @@
     bottom: 0;
     width: 100%;
 }
+a{
+    text-decoration: none;
+    color: #646771;
+}
+a:hover {
+    color: #957bda;
+}
+
 
 /* Font-size */
 .fs-10{
@@ -101,7 +109,7 @@ body {
 }
 
 .card-colors {
-    color: #646771;
+    color: #646771 !important;
     background-color: #16151a
 }
 
@@ -117,7 +125,7 @@ ul>li {
 
 ul>li:hover {
     color: #957bda;
-    cursor: pointer
+    cursor: pointer;
 }
 
 hr {
