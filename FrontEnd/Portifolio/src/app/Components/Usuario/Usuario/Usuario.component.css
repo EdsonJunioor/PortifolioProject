@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 /* Font-size */
 .fs-15{
     font-size: 15px;
@@ -5,7 +9,9 @@
 .fs-18{
     font-size: 18px;
 }
-
+.fs-20{
+    font-size: 20px;
+}
 .fs-24{
     font-size: 24px;
 }
@@ -25,6 +31,9 @@
 }
 .mt-20{
     margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
 }
 
 .ml-10{

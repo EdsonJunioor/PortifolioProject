@@ -14,9 +14,6 @@
       <select class="form-select form-select-lg mb-3" [(ngModel)]="featureSelecionada">
         <option *ngFor="let feature of features" [ngValue]="feature">{{feature.codigo}}</option>
       </select>
-      <div class="fs-15 mt-8 alert alert-warning" role="alert" *ngIf="featureSelecionada?.codigo == 'Usuário'"> 
-        Aviso: Esta tela está temporariamente fora do ar por motivos de conexão com API e Banco de Dados.
-      </div>
       <div class="fs-24 text-center mt-10">
         <span>{{featureSelecionada?.codigo}}</span>
       </div>
