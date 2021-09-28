@@ -11,6 +11,7 @@ import { FooterComponent } from './Components/Footer/Footer.component';
 import { FeatureComponent } from './Components/Feature/Feature.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CadastroUsuarioComponent } from './Components/Cadastro/CadastroUsuario/CadastroUsuario.component';
 
 
 
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UsuarioComponent,
     SideMenuComponent,
     FooterComponent,
-    FeatureComponent
+    FeatureComponent,
+    CadastroUsuarioComponent
   ],
   imports: [
     BrowserModule,
