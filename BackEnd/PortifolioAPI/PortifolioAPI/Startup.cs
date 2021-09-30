@@ -30,7 +30,7 @@ namespace PortifolioAPI
                x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))     // string " DefaultConnection " sera o nome dado para a string de conexao
            );
             services.AddControllers();
-            services.AddScoped<IUsuarioRepository, Repository>();
+            //services.AddScoped<IUsuarioRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

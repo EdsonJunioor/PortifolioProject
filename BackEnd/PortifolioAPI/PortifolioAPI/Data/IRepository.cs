@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PortifolioAPI.Data
 {
-    public interface IUsuarioRepository
+    public interface IRepository
     {
         void Add<T>(T entity) where T : class;
         void Update<T>(T entity) where T : class;
