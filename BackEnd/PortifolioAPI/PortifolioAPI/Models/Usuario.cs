@@ -7,11 +7,18 @@ namespace PortifolioAPI.Models
 {
     public class Usuario
     {
-        public int Id { get; set; }
+        public Usuario() { }                //Se não declararmos esse construtor vazio a API retorna um BadRequest "Deserialization of reference types without parameterless constructor is not supported"
+
+        public int UsuarioId { get; set; }
         public string Nome { get; set; }
-        public int Idade { get; set; }
         public string Email { get; set; }
-        public string Descricao { get; set; }
-        public string Habilidades { get; set; }
+        public string Apresentacao { get; set; }
+
+        public Usuario(string nome, string email, string apresentacao)
+        {
+            this.Nome = nome;
+            this.Email = email;
+            this.Apresentacao = apresentacao;
+        }
     }
 }

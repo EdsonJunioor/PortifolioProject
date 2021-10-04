@@ -1,11 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using PortifolioAPI.Data;
 using System;
 using System.Collections.Generic;
@@ -30,7 +28,7 @@ namespace PortifolioAPI
                x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))     // string " DefaultConnection " sera o nome dado para a string de conexao
            );
             services.AddControllers();
-            services.AddScoped<IUsuarioRepository, Repository>();
+            services.AddScoped<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
