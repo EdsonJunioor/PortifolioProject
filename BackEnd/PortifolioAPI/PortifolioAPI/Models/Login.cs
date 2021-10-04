@@ -7,6 +7,8 @@ namespace PortifolioAPI.Models
 {
     public class Login
     {
+        public Login() { }
+
         public int LoginId { get; set; }
         public Usuario usuario { get; set; }
         public int UsuarioId { get; set; }

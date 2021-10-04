@@ -7,6 +7,8 @@ namespace PortifolioAPI.Models
 {
     public class Usuario
     {
+        public Usuario() { }                //Se não declararmos esse construtor vazio a API retorna um BadRequest "Deserialization of reference types without parameterless constructor is not supported"
+
         public int UsuarioId { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }

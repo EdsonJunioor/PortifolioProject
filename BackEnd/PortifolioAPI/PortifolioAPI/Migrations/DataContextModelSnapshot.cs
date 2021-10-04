@@ -158,7 +158,6 @@ namespace PortifolioAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("usuario");
                 });
 
             modelBuilder.Entity("PortifolioAPI.Models.ExperienciaProfissional", b =>
@@ -169,7 +168,6 @@ namespace PortifolioAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("usuario");
                 });
 
             modelBuilder.Entity("PortifolioAPI.Models.Login", b =>
@@ -180,7 +178,6 @@ namespace PortifolioAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("usuario");
                 });
 
             modelBuilder.Entity("PortifolioAPI.Models.Qualificacao", b =>
@@ -191,7 +188,6 @@ namespace PortifolioAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("usuario");
                 });
 #pragma warning restore 612, 618
         }

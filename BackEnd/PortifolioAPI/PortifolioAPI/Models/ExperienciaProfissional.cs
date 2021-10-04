@@ -7,6 +7,8 @@ namespace PortifolioAPI.Models
 {
     public class ExperienciaProfissional
     {
+        public ExperienciaProfissional() { }
+
         public int ExpProfId { get; set; }
         public Usuario usuario { get; set; }
         public int UsuarioId { get; set; }

@@ -7,6 +7,8 @@ namespace PortifolioAPI.Models
 {
     public class Qualificacao
     {
+        public Qualificacao() { }
+
         public int QualificacaoId { get; set; }
         public Usuario usuario { get; set; }
         public int UsuarioId { get; set; }

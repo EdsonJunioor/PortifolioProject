@@ -7,6 +7,7 @@ namespace PortifolioAPI.Models
 {
     public class Escolaridade
     {
+        public Escolaridade() { }
         public int EscolaridadeId { get; set; }
         public Usuario usuario { get; set; }
         public int UsuarioId { get; set; }
