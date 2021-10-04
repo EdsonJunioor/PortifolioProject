@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PortifolioAPI.Data
 {
-    public class Repository : IUsuarioRepository
+    public class Repository : IRepository
     {
         private readonly DataContext _context;
 
@@ -31,24 +31,88 @@ namespace PortifolioAPI.Data
         {
             return (await _context.SaveChangesAsync()) > 0;
         }
-
-        public async Task<Usuario[]> GetAllUsuarioAsync()
+        // USUARIO
+        public async Task<Usuario[]> FindAllUsuarioAsync()
         {
-            IQueryable<Usuario> query = _context.Usuarios;
+            IQueryable<Usuario> query = _context.Usuario;
 
 
             query = query.AsNoTracking()
-                         .OrderBy(c => c.Id);
+                         .OrderBy(c => c.UsuarioId);
 
             return await query.ToArrayAsync();
         }
-        public async Task<Usuario> GetUsuarioAsyncById(int usuarioId)
+        public async Task<Usuario> FindUsuarioByIdAsync(int usuarioId)
         {
-            IQueryable<Usuario> query = _context.Usuarios;
+            IQueryable<Usuario> query = _context.Usuario;
 
             query = query.AsNoTracking()
-                         .OrderBy(usuario => usuario.Id)
-                         .Where(usuario => usuario.Id == usuarioId);
+                         .OrderBy(usuario => usuario.UsuarioId)
+                         .Where(usuario => usuario.UsuarioId == usuarioId);
+
+            return await query.FirstOrDefaultAsync();
+        }
+        // LOGIN
+        public async Task<Login> FindLoginByEmail(string email)
+        {
+            IQueryable<Login> query = _context.Login;
+
+            query = query.AsNoTracking()
+                         .OrderBy(login => login.Email)
+                         .Where(login => login.Email == email);
+
+            return await query.FirstOrDefaultAsync();
+        } 
+        // ESCOLARIDADE
+        public async Task<Escolaridade> FindEscolaridadeById(int id)
+        {
+            IQueryable<Escolaridade> query = _context.Escolaridade;
+
+            query = query.AsNoTracking()
+                         .OrderBy(escolaridade => escolaridade.UsuarioId)
+                         .Where(escolaridade => escolaridade.UsuarioId == id);
+
+            return await query.FirstOrDefaultAsync();
+        }
+        // EXPERIENCIA PROFISSIONAL
+        public async Task<ExperienciaProfissional[]> FindAllExperiencia()
+        {
+            IQueryable<ExperienciaProfissional> query = _context.ExperienciaProfissional;
+
+
+            query = query.AsNoTracking()
+                         .OrderBy(e => e.UsuarioId);
+
+            return await query.ToArrayAsync();
+        }
+        public async Task<ExperienciaProfissional> FindExperienciaById(int id)
+        {
+            IQueryable<ExperienciaProfissional> query = _context.ExperienciaProfissional;
+
+            query = query.AsNoTracking()
+                         .OrderBy(e => e.UsuarioId)
+                         .Where(e => e.UsuarioId == id);
+
+            return await query.FirstOrDefaultAsync();
+        }
+        // QUALIFICAÇÃO
+        public async Task<Qualificacao[]> FindAllQualificacao()
+        {
+            IQueryable<Qualificacao> query = _context.Qualificacao;
+
+
+            query = query.AsNoTracking()
+                         .OrderBy(q => q.UsuarioId);
+
+            return await query.ToArrayAsync();
+        }
+        public async Task<Qualificacao> FindQualificacaoById(int id)
+        {
+            IQueryable<Qualificacao> query = _context.Qualificacao;
+
+            query = query.AsNoTracking()
+                         .OrderBy(q => q.UsuarioId)
+                         .Where(q => q.UsuarioId == id);
 
             return await query.FirstOrDefaultAsync();
         }

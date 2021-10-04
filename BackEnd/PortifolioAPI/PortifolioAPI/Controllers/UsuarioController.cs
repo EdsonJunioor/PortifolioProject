@@ -12,9 +12,9 @@ namespace PortifolioAPI.Controllers
     [Route("api/usuario")]
     public class UsuarioController : Controller
     {
-        private readonly IUsuarioRepository usuarioRepository;
+        private readonly IRepository usuarioRepository;
 
-        public UsuarioController(IUsuarioRepository usuarioRepository)
+        public UsuarioController(IRepository usuarioRepository)
         {
             this.usuarioRepository = usuarioRepository;
         }
@@ -22,7 +22,7 @@ namespace PortifolioAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllUsuario()
         {
-            var result = await this.usuarioRepository.GetAllUsuarioAsync();
+            var result = await this.usuarioRepository.FindAllUsuarioAsync();
 
             return Ok(result);
         }
@@ -32,24 +32,24 @@ namespace PortifolioAPI.Controllers
         {
             try
             {
-                var result = await this.usuarioRepository.GetUsuarioAsyncById(id);
+                var result = await this.usuarioRepository.FindUsuarioByIdAsync(id);
                 if (result != null)
                 {
                     return Ok(result);
                 }
                 else
                 {
-                    return NotFound($"Erro: Usuario não encontrado.") ;
+                    return NotFound($"Erro: Usuario não encontrado.");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest($"Erro:{ex.Message}");
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> Criar([FromBody]Usuario usuarioModel)
+        public async Task<IActionResult> Criar([FromBody] Usuario usuarioModel)
         {
             try
             {
@@ -59,12 +59,40 @@ namespace PortifolioAPI.Controllers
                 {
                     return Ok(usuarioModel);
                 }
+                else
+                {
+                    return BadRequest("Erro ao salvar um usuario");
+                }
             }
             catch (Exception ex)
             {
                 return BadRequest($"Erro:{ex.Message}");
             }
-            return BadRequest();
         }
+
+        [HttpPut, Route("editar/{id}")]
+        public async Task<IActionResult> EditarUsuario(int id, [FromBody]Usuario usuario)
+        {
+            try
+            {
+                var retorno = await usuarioRepository.FindUsuarioByIdAsync(id);
+
+                if(retorno != null)
+                {
+                    usuarioRepository.Update(usuario);
+                    await usuarioRepository.SaveChangesAsync();
+                    return Ok("Usuario editado");
+                }
+                else
+                {
+                    return BadRequest("Erro ao editar o usuario");
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro:{ex.Message}");
+            }
+        }
+
     }
 }
